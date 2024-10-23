@@ -7,15 +7,15 @@ This Tool is used for enumerating and querying preexisting databases you have fo
 ![Sreenshot of tool](https://github.com/Quantum-Solace/Quantum-Search/blob/main/Screenshot.png)
 
 "Windows Installation'  
--`git clone `  
--`cd .\Quantum-Search`  
+-`git clone https://github.com/Quantum-Solace/Quantum-Search.git`  
+-`cd .\Quantum-Search\`  
 -`mkdir data`  
 -`npm install express ejs csv-parser sqlite3`  
 -`node .\app.js`  
 -click `http://localhost:3000`  
 
 "Linux Installation'  
--`git clone `  
+-`git clone https://github.com/Quantum-Solace/Quantum-Search.git`  
 -`cd /Quantum-Search`  
 -`mkdir data`  
 -`npm install express ejs csv-parser sqlite3`  
