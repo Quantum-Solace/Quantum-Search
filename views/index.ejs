@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Search</title>
+    <link rel="stylesheet" href="/style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Quantum Search</h1>
+        <form action="/search" method="POST">
+            <input type="text" name="firstName" placeholder="First Name">
+            <input type="text" name="lastName" placeholder="Last Name">
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="phoneNumber" placeholder="Phone Number">
+            <input type="text" name="address" placeholder="Address">
+            <input type="text" name="country" placeholder="Country">
+            <input type="text" name="state" placeholder="State">
+            <input type="text" name="username" placeholder="Username">
+            <button type="submit">Search</button>
+        </form>
+
+        <h2>Search Results</h2>
+        <div class="results">
+            <% if (results.length === 0) { %>
+                <p>No results found.</p>
+            <% } else { %>
+                <ul>
+                    <% results.forEach(result => { %>
+                        <li>
+                            <strong>Source:</strong> <%= result.source %> <br>
+                            <strong style="color: red;">Data:</strong> <%= JSON.stringify(result.data) %>
+                        </li>
+                    <% }) %>
+                </ul>
+            <% } %>
+        </div>
+
+        <h2>Related Images</h2>
+        <div class="images">
+            <% if (images.length === 0) { %>
+                <p>No related images found.</p>
+            <% } else { %>
+                <ul>
+                    <% images.forEach(image => { %>
+                        <li>
+                            <img src="/data/<%= image %>" alt="<%= image %>" style="width: 150px; height: auto;">
+                        </li>
+                    <% }) %>
+                </ul>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
