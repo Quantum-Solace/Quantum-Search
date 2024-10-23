@@ -8,7 +8,7 @@ This Tool is used for enumerating and querying preexisting databases you have fo
 
 "Windows Installation'  
 -`git clone `  
--`cd \Quantum-Search`  
+-`cd .\Quantum-Search`  
 -`mkdir data`  
 -`npm install express ejs csv-parser sqlite3`  
 -`node .\app.js`  
